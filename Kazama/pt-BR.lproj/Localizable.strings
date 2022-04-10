@@ -1,0 +1,11 @@
+/* 
+ Localizable.strings
+ Kazama
+ 
+ Created by LUIZ FELIPE ALVES LIMA on 10/04/22.
+ 
+ */
+
+"SeachPageTitle" = "Tempo";
+"SearchFielTitle" = "Busque uma Cidade";
+"CurrentLocation" = "Localização Atual";

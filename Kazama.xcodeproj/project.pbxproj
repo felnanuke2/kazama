@@ -7,18 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D66FD8EA594973CEFA437C60 /* Pods_Kazama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF33FBBFCF5083682B58B923 /* Pods_Kazama.framework */; };
+		F93E5CAE27FF35A7007524BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E5CAD27FF35A7007524BE /* HomeViewController.swift */; };
+		F93E5CB027FF578B007524BE /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E5CAF27FF578B007524BE /* WeatherApi.swift */; };
 		F953E1DB27FE3E3200E24480 /* KazamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E1DA27FE3E3200E24480 /* KazamaApp.swift */; };
 		F953E1DD27FE3E3200E24480 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E1DC27FE3E3200E24480 /* ContentView.swift */; };
 		F953E1DF27FE3E3300E24480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F953E1DE27FE3E3300E24480 /* Assets.xcassets */; };
 		F953E1E227FE3E3300E24480 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F953E1E127FE3E3300E24480 /* Preview Assets.xcassets */; };
+		F953E1EC27FE84A000E24480 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E1EB27FE84A000E24480 /* HomeView.swift */; };
+		F953E1F027FE87EB00E24480 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E1EF27FE87EB00E24480 /* HomeHeader.swift */; };
+		F953E1F427FE90FE00E24480 /* WeatherStyleSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E1F327FE90FE00E24480 /* WeatherStyleSchema.swift */; };
+		F99007162801F48200DDFDC9 /* AnimationLottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99007152801F48200DDFDC9 /* AnimationLottie.swift */; };
+		F99007182802154500DDFDC9 /* Conditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99007172802154500DDFDC9 /* Conditions.swift */; };
+		F990071B28032CA700DDFDC9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F990071A28032CA700DDFDC9 /* SearchView.swift */; };
+		F990071E2803302B00DDFDC9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F99007202803302B00DDFDC9 /* Localizable.strings */; };
+		F9900724280330C700DDFDC9 /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9900723280330C700DDFDC9 /* Localizables.swift */; };
+		F99007262803497900DDFDC9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99007252803497800DDFDC9 /* SearchViewModel.swift */; };
+		F9900728280351E400DDFDC9 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9900727280351E400DDFDC9 /* SearchLocation.swift */; };
+		F9CA118927FFA34800E139EE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CA118827FFA34800E139EE /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A9328DD30F0DF09D1A44A09 /* Pods-Kazama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kazama.release.xcconfig"; path = "Target Support Files/Pods-Kazama/Pods-Kazama.release.xcconfig"; sourceTree = "<group>"; };
+		D1C39FBB3443A51C76DA3447 /* Pods-Kazama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kazama.debug.xcconfig"; path = "Target Support Files/Pods-Kazama/Pods-Kazama.debug.xcconfig"; sourceTree = "<group>"; };
+		F93E5CAD27FF35A7007524BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F93E5CAF27FF578B007524BE /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		F953E1D727FE3E3200E24480 /* Kazama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kazama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F953E1DA27FE3E3200E24480 /* KazamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KazamaApp.swift; sourceTree = "<group>"; };
 		F953E1DC27FE3E3200E24480 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F953E1DE27FE3E3300E24480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F953E1E127FE3E3300E24480 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F953E1EB27FE84A000E24480 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F953E1EF27FE87EB00E24480 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		F953E1F327FE90FE00E24480 /* WeatherStyleSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStyleSchema.swift; sourceTree = "<group>"; };
+		F99007142801204000DDFDC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F99007152801F48200DDFDC9 /* AnimationLottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLottie.swift; sourceTree = "<group>"; };
+		F99007172802154500DDFDC9 /* Conditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditions.swift; sourceTree = "<group>"; };
+		F990071A28032CA700DDFDC9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F990071F2803302B00DDFDC9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F99007212803302F00DDFDC9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F9900723280330C700DDFDC9 /* Localizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizables.swift; sourceTree = "<group>"; };
+		F99007252803497800DDFDC9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		F9900727280351E400DDFDC9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
+		F9CA118827FFA34800E139EE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		FF33FBBFCF5083682B58B923 /* Pods_Kazama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kazama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +58,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D66FD8EA594973CEFA437C60 /* Pods_Kazama.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		232B8A4A73F799B9AF1136E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF33FBBFCF5083682B58B923 /* Pods_Kazama.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B21A033126B5A968A404D8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1C39FBB3443A51C76DA3447 /* Pods-Kazama.debug.xcconfig */,
+				4A9328DD30F0DF09D1A44A09 /* Pods-Kazama.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F93E5CB127FF57E3007524BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9CA118827FFA34800E139EE /* Weather.swift */,
+				F9900727280351E400DDFDC9 /* SearchLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F953E1CE27FE3E3200E24480 = {
 			isa = PBXGroup;
 			children = (
 				F953E1D927FE3E3200E24480 /* Kazama */,
 				F953E1D827FE3E3200E24480 /* Products */,
+				7B21A033126B5A968A404D8E /* Pods */,
+				232B8A4A73F799B9AF1136E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +112,16 @@
 		F953E1D927FE3E3200E24480 /* Kazama */ = {
 			isa = PBXGroup;
 			children = (
+				F99007222803309800DDFDC9 /* Utils */,
+				F99007142801204000DDFDC9 /* Info.plist */,
+				F953E1EA27FE3ED600E24480 /* Model */,
+				F953E1E927FE3EC600E24480 /* ViewController */,
+				F953E1E827FE3EA800E24480 /* View */,
 				F953E1DA27FE3E3200E24480 /* KazamaApp.swift */,
 				F953E1DC27FE3E3200E24480 /* ContentView.swift */,
 				F953E1DE27FE3E3300E24480 /* Assets.xcassets */,
 				F953E1E027FE3E3300E24480 /* Preview Content */,
+				F99007202803302B00DDFDC9 /* Localizable.strings */,
 			);
 			path = Kazama;
 			sourceTree = "<group>";
@@ -67,6 +134,77 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F953E1E827FE3EA800E24480 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F990071928032C9400DDFDC9 /* Search */,
+				F953E1ED27FE87B400E24480 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F953E1E927FE3EC600E24480 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F93E5CAD27FF35A7007524BE /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F953E1EA27FE3ED600E24480 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F93E5CB127FF57E3007524BE /* Models */,
+				F93E5CAF27FF578B007524BE /* WeatherApi.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F953E1ED27FE87B400E24480 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F953E1F227FE90E400E24480 /* Models */,
+				F953E1EE27FE87BD00E24480 /* Components */,
+				F953E1EB27FE84A000E24480 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F953E1EE27FE87BD00E24480 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F953E1EF27FE87EB00E24480 /* HomeHeader.swift */,
+				F99007152801F48200DDFDC9 /* AnimationLottie.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F953E1F227FE90E400E24480 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F953E1F327FE90FE00E24480 /* WeatherStyleSchema.swift */,
+				F99007172802154500DDFDC9 /* Conditions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F990071928032C9400DDFDC9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F990071A28032CA700DDFDC9 /* SearchView.swift */,
+				F99007252803497800DDFDC9 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F99007222803309800DDFDC9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F9900723280330C700DDFDC9 /* Localizables.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F953E1E527FE3E3300E24480 /* Build configuration list for PBXNativeTarget "Kazama" */;
 			buildPhases = (
+				5F74059A4B79A7BAEF97AE4E /* [CP] Check Pods Manifest.lock */,
 				F953E1D327FE3E3200E24480 /* Sources */,
 				F953E1D427FE3E3200E24480 /* Frameworks */,
 				F953E1D527FE3E3200E24480 /* Resources */,
+				3E254DD9DE04B36DFA3FBF62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +249,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = F953E1CE27FE3E3200E24480;
 			productRefGroup = F953E1D827FE3E3200E24480 /* Products */;
@@ -126,23 +267,90 @@
 			buildActionMask = 2147483647;
 			files = (
 				F953E1E227FE3E3300E24480 /* Preview Assets.xcassets in Resources */,
+				F990071E2803302B00DDFDC9 /* Localizable.strings in Resources */,
 				F953E1DF27FE3E3300E24480 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E254DD9DE04B36DFA3FBF62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kazama/Pods-Kazama-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kazama/Pods-Kazama-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kazama/Pods-Kazama-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F74059A4B79A7BAEF97AE4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kazama-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F953E1D327FE3E3200E24480 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F953E1EC27FE84A000E24480 /* HomeView.swift in Sources */,
+				F93E5CAE27FF35A7007524BE /* HomeViewController.swift in Sources */,
+				F953E1F427FE90FE00E24480 /* WeatherStyleSchema.swift in Sources */,
+				F99007162801F48200DDFDC9 /* AnimationLottie.swift in Sources */,
+				F9CA118927FFA34800E139EE /* Weather.swift in Sources */,
+				F99007262803497900DDFDC9 /* SearchViewModel.swift in Sources */,
+				F953E1F027FE87EB00E24480 /* HomeHeader.swift in Sources */,
+				F9900724280330C700DDFDC9 /* Localizables.swift in Sources */,
 				F953E1DD27FE3E3200E24480 /* ContentView.swift in Sources */,
+				F99007182802154500DDFDC9 /* Conditions.swift in Sources */,
+				F9900728280351E400DDFDC9 /* SearchLocation.swift in Sources */,
 				F953E1DB27FE3E3200E24480 /* KazamaApp.swift in Sources */,
+				F93E5CB027FF578B007524BE /* WeatherApi.swift in Sources */,
+				F990071B28032CA700DDFDC9 /* SearchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F99007202803302B00DDFDC9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F990071F2803302B00DDFDC9 /* pt-BR */,
+				F99007212803302F00DDFDC9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F953E1E327FE3E3300E24480 /* Debug */ = {
@@ -263,6 +471,7 @@
 		};
 		F953E1E627FE3E3300E24480 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1C39FBB3443A51C76DA3447 /* Pods-Kazama.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -272,6 +481,7 @@
 				DEVELOPMENT_TEAM = 28KT9M7J7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kazama/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -292,6 +502,7 @@
 		};
 		F953E1E727FE3E3300E24480 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A9328DD30F0DF09D1A44A09 /* Pods-Kazama.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +512,7 @@
 				DEVELOPMENT_TEAM = 28KT9M7J7A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kazama/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
