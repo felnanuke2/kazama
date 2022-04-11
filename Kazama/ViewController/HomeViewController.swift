@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 
 class HomeViewController : ObservableObject{
@@ -17,15 +18,27 @@ class HomeViewController : ObservableObject{
     
     @Published var weatherSchema:  WeatherStyleSchema = .clearDay
     
+    @AppStorage("currentLat") var currentLat : Double = 0.0
+    @AppStorage("currentLng") var currentLng : Double = 0.0
+    @AppStorage("currentLocationName") var currentLocationName: String = ""
     
     
     let weatherApi : WeatherApi = WeatherApi(options: .dev)
     
     @MainActor
     func getCurrentWeather() async{
+        if(currentLat == 0 && currentLng == 0){
+            return
+        }
         
-        currentWeater  = try! await weatherApi.getCurrentWeather(lat:-23.550520, lng:  -46.633308)
-    setWeatherStyleSchema()
+        do{
+            currentWeater  = try await weatherApi.getCurrentWeather(lat:currentLat, lng:  currentLng)
+            setWeatherStyleSchema()
+        }
+        catch let error {
+            print("error on result of request \(error)")
+        }
+
         
     }
     

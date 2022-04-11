@@ -11,7 +11,7 @@ import SwiftUI
 struct KazamaApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchView(viewModel: SearchViewModel(weatherApi: WeatherApi(options: .dev)))
+          HomeView()
         }
     }
 }

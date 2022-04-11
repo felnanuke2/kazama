@@ -14,26 +14,32 @@ struct HomeHeader: View {
     
     
     var body: some View {
-        HStack{
-            Image("location-dot-solid")
-                
-                .resizable().renderingMode(.template)
-            
-                .scaledToFit()
-                .frame(height: 18).padding(.trailing,8)
     
+            HStack{
+                NavigationLink(destination: SearchView() ){
+                HStack{
+                    Image("location-dot-solid")
+                        
+                        .resizable().renderingMode(.template)
+                    
+                        .scaledToFit()
+                        .frame(height: 18).padding(.trailing,8)
+            
+                        
+                       
+                    
+                    Text(localName).font(.system(size: 18).bold())
+              
+                    
+                    Image(systemName: "chevron.down").font(.caption.bold()).padding(.leading,8)
+                    Spacer()
+                }
+                }
                 
-               
-            
-            Text(localName).font(.system(size: 18).bold())
-      
-            
-            Image(systemName: "chevron.down").font(.caption.bold()).padding(.leading,8)
-            Spacer()
-            
-            Image(systemName: "calendar").resizable().scaledToFit().frame(height: 18)
-        }.padding(.horizontal,16).foregroundColor(colorSchema.foregroundColorPrimary)
-    }
+                Image(systemName: "calendar").resizable().scaledToFit().frame(height: 18)
+            }.padding(.horizontal,16).foregroundColor(colorSchema.foregroundColorPrimary)
+    
+}
 }
 
 struct HomeHeader_Previews: PreviewProvider {

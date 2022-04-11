@@ -30,7 +30,7 @@ class Weather: Codable {
 class Current: Codable {
     let lastUpdatedEpoch: Int
     let lastUpdated: String
-    let tempC: Int
+    let tempC: Double
     let tempF: Double
     let isDay: Int
     let condition: Condition
@@ -72,7 +72,7 @@ class Current: Codable {
         case gustKph = "gust_kph"
     }
     
-    init(lastUpdatedEpoch: Int, lastUpdated: String, tempC: Int, tempF: Double, isDay: Int, condition: Condition, windMph: Double, windKph: Double, windDegree: Double, windDir: String, pressureMB: Double, pressureIn: Double, precipMm: Double, precipIn: Double, humidity: Double, cloud: Double, feelslikeC: Double, feelslikeF: Double, visKM: Double, visMiles: Double, uv: Double, gustMph: Double, gustKph: Double) {
+    init(lastUpdatedEpoch: Int, lastUpdated: String, tempC: Double, tempF: Double, isDay: Int, condition: Condition, windMph: Double, windKph: Double, windDegree: Double, windDir: String, pressureMB: Double, pressureIn: Double, precipMm: Double, precipIn: Double, humidity: Double, cloud: Double, feelslikeC: Double, feelslikeF: Double, visKM: Double, visMiles: Double, uv: Double, gustMph: Double, gustKph: Double) {
         self.lastUpdatedEpoch = lastUpdatedEpoch
         self.lastUpdated = lastUpdated
         self.tempC = tempC
