@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import UIImageColors
 
 
 struct WeatherStyleSchema{
@@ -95,6 +96,29 @@ extension  WeatherStyleSchema{
         ], startPoint: .top, endPoint: .bottom),lottieName:"LIghtRain")
 }
 
+
+extension Hour{
+    func localizedName (lng: String  ) -> String{
+        do{
+            let conditions = try JSONDecoder().decode([WeatherCondition].self, from:  NSDataAsset(name: "conditions")!.data)
+      let currentCondition = conditions.filter {
+          e in e.code == self.condition.code
+      }.first
+            let currentLng =  currentCondition!.languages.filter{
+                language in
+                language.langISO.rawValue == lng.lowercased()
+            }.first
+            return self.isDay == 1 ? currentLng!.dayText : currentLng!.nightText
+            
+        }catch let error {
+            print(error)
+        }
+
+         
+         
+         return ""
+    }
+}
 
 extension Weather{
    func localizedName(lng : String) -> String{

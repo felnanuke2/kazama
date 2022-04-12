@@ -9,3 +9,5 @@
 "SeachPageTitle" = "Weather";
 "SearchFielTitle" = "Search a City";
 "CurrentLocation" = "Current Location";
+"ChanceOfRain %@" = "Chance de chuva %@";
+"Humity" = "Humity";

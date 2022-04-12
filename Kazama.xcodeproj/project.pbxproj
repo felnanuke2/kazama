@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D66FD8EA594973CEFA437C60 /* Pods_Kazama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF33FBBFCF5083682B58B923 /* Pods_Kazama.framework */; };
-		F93E5CAE27FF35A7007524BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E5CAD27FF35A7007524BE /* HomeViewController.swift */; };
+		F93E5CAE27FF35A7007524BE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E5CAD27FF35A7007524BE /* HomeViewModel.swift */; };
 		F93E5CB027FF578B007524BE /* WeatherApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E5CAF27FF578B007524BE /* WeatherApi.swift */; };
 		F953E1DB27FE3E3200E24480 /* KazamaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E1DA27FE3E3200E24480 /* KazamaApp.swift */; };
 		F953E1DD27FE3E3200E24480 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953E1DC27FE3E3200E24480 /* ContentView.swift */; };
@@ -24,13 +24,16 @@
 		F9900724280330C700DDFDC9 /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9900723280330C700DDFDC9 /* Localizables.swift */; };
 		F99007262803497900DDFDC9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99007252803497800DDFDC9 /* SearchViewModel.swift */; };
 		F9900728280351E400DDFDC9 /* SearchLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9900727280351E400DDFDC9 /* SearchLocation.swift */; };
+		F99DBE3F2805FDD600F5FA9D /* UnsplashSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99DBE3E2805FDD600F5FA9D /* UnsplashSearchResult.swift */; };
+		F99DBE412805FE1C00F5FA9D /* UnsplashApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99DBE402805FE1C00F5FA9D /* UnsplashApi.swift */; };
+		F9B012502805238400BA93BE /* HourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B0124F2805238400BA93BE /* HourCard.swift */; };
 		F9CA118927FFA34800E139EE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CA118827FFA34800E139EE /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4A9328DD30F0DF09D1A44A09 /* Pods-Kazama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kazama.release.xcconfig"; path = "Target Support Files/Pods-Kazama/Pods-Kazama.release.xcconfig"; sourceTree = "<group>"; };
 		D1C39FBB3443A51C76DA3447 /* Pods-Kazama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kazama.debug.xcconfig"; path = "Target Support Files/Pods-Kazama/Pods-Kazama.debug.xcconfig"; sourceTree = "<group>"; };
-		F93E5CAD27FF35A7007524BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F93E5CAD27FF35A7007524BE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F93E5CAF27FF578B007524BE /* WeatherApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApi.swift; sourceTree = "<group>"; };
 		F953E1D727FE3E3200E24480 /* Kazama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kazama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F953E1DA27FE3E3200E24480 /* KazamaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KazamaApp.swift; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		F9900723280330C700DDFDC9 /* Localizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizables.swift; sourceTree = "<group>"; };
 		F99007252803497800DDFDC9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		F9900727280351E400DDFDC9 /* SearchLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocation.swift; sourceTree = "<group>"; };
+		F99DBE3E2805FDD600F5FA9D /* UnsplashSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashSearchResult.swift; sourceTree = "<group>"; };
+		F99DBE402805FE1C00F5FA9D /* UnsplashApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashApi.swift; sourceTree = "<group>"; };
+		F9B0124F2805238400BA93BE /* HourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCard.swift; sourceTree = "<group>"; };
 		F9CA118827FFA34800E139EE /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		FF33FBBFCF5083682B58B923 /* Pods_Kazama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kazama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +93,7 @@
 			children = (
 				F9CA118827FFA34800E139EE /* Weather.swift */,
 				F9900727280351E400DDFDC9 /* SearchLocation.swift */,
+				F99DBE3E2805FDD600F5FA9D /* UnsplashSearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,7 +122,6 @@
 				F99007222803309800DDFDC9 /* Utils */,
 				F99007142801204000DDFDC9 /* Info.plist */,
 				F953E1EA27FE3ED600E24480 /* Model */,
-				F953E1E927FE3EC600E24480 /* ViewController */,
 				F953E1E827FE3EA800E24480 /* View */,
 				F953E1DA27FE3E3200E24480 /* KazamaApp.swift */,
 				F953E1DC27FE3E3200E24480 /* ContentView.swift */,
@@ -143,19 +149,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F953E1E927FE3EC600E24480 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F93E5CAD27FF35A7007524BE /* HomeViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		F953E1EA27FE3ED600E24480 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F93E5CB127FF57E3007524BE /* Models */,
 				F93E5CAF27FF578B007524BE /* WeatherApi.swift */,
+				F99DBE402805FE1C00F5FA9D /* UnsplashApi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +165,7 @@
 				F953E1F227FE90E400E24480 /* Models */,
 				F953E1EE27FE87BD00E24480 /* Components */,
 				F953E1EB27FE84A000E24480 /* HomeView.swift */,
+				F93E5CAD27FF35A7007524BE /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -175,6 +175,7 @@
 			children = (
 				F953E1EF27FE87EB00E24480 /* HomeHeader.swift */,
 				F99007152801F48200DDFDC9 /* AnimationLottie.swift */,
+				F9B0124F2805238400BA93BE /* HourCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -322,12 +323,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F953E1EC27FE84A000E24480 /* HomeView.swift in Sources */,
-				F93E5CAE27FF35A7007524BE /* HomeViewController.swift in Sources */,
+				F93E5CAE27FF35A7007524BE /* HomeViewModel.swift in Sources */,
 				F953E1F427FE90FE00E24480 /* WeatherStyleSchema.swift in Sources */,
 				F99007162801F48200DDFDC9 /* AnimationLottie.swift in Sources */,
 				F9CA118927FFA34800E139EE /* Weather.swift in Sources */,
+				F9B012502805238400BA93BE /* HourCard.swift in Sources */,
+				F99DBE412805FE1C00F5FA9D /* UnsplashApi.swift in Sources */,
 				F99007262803497900DDFDC9 /* SearchViewModel.swift in Sources */,
 				F953E1F027FE87EB00E24480 /* HomeHeader.swift in Sources */,
+				F99DBE3F2805FDD600F5FA9D /* UnsplashSearchResult.swift in Sources */,
 				F9900724280330C700DDFDC9 /* Localizables.swift in Sources */,
 				F953E1DD27FE3E3200E24480 /* ContentView.swift in Sources */,
 				F99007182802154500DDFDC9 /* Conditions.swift in Sources */,

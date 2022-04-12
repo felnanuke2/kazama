@@ -1,16 +1,20 @@
 PODS:
   - lottie-ios (3.3.0)
+  - UIImageColors (2.1.0)
 
 DEPENDENCIES:
   - lottie-ios
+  - UIImageColors
 
 SPEC REPOS:
   trunk:
     - lottie-ios
+    - UIImageColors
 
 SPEC CHECKSUMS:
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
+  UIImageColors: d2ef3b0877d203cbb06489eeb78ea8b7788caabe
 
-PODFILE CHECKSUM: 420e9f31b83dd3575d0d56644dc8aa5ea239a708
+PODFILE CHECKSUM: c9ac16cc7c9b858a3bd8cf6c7a7c5bf47640d9d1
 
 COCOAPODS: 1.11.2

@@ -10,5 +10,13 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "UnsplashApi.searchImages(query:):UnsplashApi.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "responseValue?.statusCode">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -8,5 +8,6 @@ target 'Kazama' do
   # Pods for Kazama
 
 pod 'lottie-ios'
+pod 'UIImageColors'
 
 end

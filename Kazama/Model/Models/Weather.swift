@@ -99,9 +99,20 @@ class Current: Codable {
     }
 }
 
+
+extension Condition {
+    
+   
+    var iconUrl: String {
+       "https:\(self.icon)"
+    }
+}
+
 // MARK: - Condition
 class Condition: Codable {
-    let text, icon: String
+    let text: String
+ private let icon: String
+
     let code: Int
     
     init(text: String, icon: String, code: Int) {
@@ -215,6 +226,12 @@ class Day: Codable {
         self.dailyChanceOfSnow = dailyChanceOfSnow
         self.condition = condition
         self.uv = uv
+    }
+}
+
+extension Hour{
+    var date : Date {
+        Date(timeIntervalSince1970: TimeInterval(self.timeEpoch))
     }
 }
 

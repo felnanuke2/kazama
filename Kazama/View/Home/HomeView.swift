@@ -6,36 +6,36 @@
 //
 
 import SwiftUI
+import UIImageColors
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewController()
-    var schema: WeatherStyleSchema  {
+    @ObservedObject var viewModel = HomeViewModel()
+    var schema: UIImageColors? {
         
-        viewModel.weatherSchema
+        viewModel.colorSchema
     }
     let screenHeight = UIScreen.main.bounds.size.height
     
     var body: some View {
         NavigationView {
             ZStack {
-                schema.gradient.edgesIgnoringSafeArea(.all)
-            
+                if( viewModel.backGroundImage != nil){
+                    
+                    Image(uiImage: viewModel.backGroundImage!).resizable()
+                
+                .ignoresSafeArea(.all)
+                
+                    
+                }
                 
                 VStack{
-                    HomeHeader(localName: viewModel.currentWeater?.location.name ?? "" , colorSchema: schema)
+                    if(schema != nil){
+                 
+                   
+           
+                        Text(viewModel.currentWeater?.localizedName(lng: "pt") ?? "").font(.system(size: 14).bold()).foregroundColor(schema!.primary.color)
                     
-                    if(schema.lottie != nil){
-                        
-                        schema.lottie?.frame(height: screenHeight * 0.25).id(schema.lottie?.name).padding(.vertical,16)
-                        
-                    }else{
-                        
-                  schema.image!.resizable().scaledToFit().frame(height: screenHeight * 0.08).padding(.vertical,62).shadow(color: .black.opacity(0.4), radius:2, x: 2, y: 2)
-                        
-                    }
-                    Text(viewModel.currentWeater?.localizedName(lng: "pt") ?? "").font(.system(size: 14).bold()).foregroundColor(schema.foregroundColorPrimary)
-                    
-                    Text(String(format: "%.0f°", arguments:[viewModel.currentWeater?.current.tempC ?? 0])).font(.system(size: 50)).bold().shadow(color:.white.opacity(0.8), radius: 24, x: 1, y: 1).foregroundStyle(schema.foregroundColorPrimary, .white).padding(.vertical,8)
+                        Text(String(format: "%.0f°", arguments:[viewModel.currentWeater?.current.tempC ?? 0])).font(.system(size: 50)).bold().shadow(color:.white.opacity(0.8), radius: 24, x: 1, y: 1).foregroundStyle(schema!.primary.color, .white).padding(.vertical,8)
                     
                     HStack{
                         HStack{
@@ -47,16 +47,40 @@ struct HomeView: View {
                             Image(systemName: "humidity.fill")
                             Text(String(format: "%.0f",viewModel.currentWeater?.current.humidity ?? 0 ).appending("%")).font(.caption)
                         }
-                    }.frame(width: 150).foregroundColor(schema.foregroundColorSecundary)
+                    }.frame(width: 150).foregroundColor(schema!.primary.color)
                     
                     Spacer()
-                   
+                    if(viewModel.currentWeater != nil){
+                        ScrollView(.horizontal){
+                            LazyHStack(spacing: 16){
+                                
+                                ForEach(viewModel.currentWeater!.forecast.forecastday[0].hour.filter{
+                                    hour in
+                                    hour.date.distance(to: .now) < 0
+                                } , id: \.time){
+                                    hour in
+                                    HourCard(schema: schema!, tempC: hour.tempC, date: Date(timeIntervalSince1970: TimeInterval(hour.timeEpoch)) ){
+                                        VStack{
+                                            AsyncImage(url: URL(string: hour.condition.iconUrl) ){
+                                                image in
+                                                image.resizable().scaledToFit()
+                                            } placeholder: {
+                                                ProgressView().progressViewStyle(CircularProgressViewStyle()).scaleEffect(1)
+                                            }
+                                            Text(hour.localizedName(lng: "pt")).font(.caption).multilineTextAlignment(.center).foregroundColor(schema?.detail.color)
+                                        }
+                                    }
+                                    
+                                }
+                            }  .padding(.top,16).padding(.horizontal,16)
+                        }
                     
-                    
+                }
+                    }
                 }
                 
               
-                .padding(.top,16)
+              
             }.task {
                 await viewModel.getCurrentWeather()
             }.navigationBarHidden(true)
@@ -64,8 +88,42 @@ struct HomeView: View {
     }
 }
 
+
+
+
+
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewController())
+        HomeView(viewModel: HomeViewModel())
+    }
+}
+
+extension View {
+// This function changes our View to UIView, then calls another function
+// to convert the newly-made UIView to a UIImage.
+    public func asUIImage() -> UIImage {
+        let controller = UIHostingController(rootView: self)
+        
+        controller.view.frame = CGRect(x: 0, y: CGFloat(Int.max), width: 1, height: 1)
+        UIApplication.shared.windows.first!.rootViewController?.view.addSubview(controller.view)
+        
+        let size = controller.sizeThatFits(in: UIScreen.main.bounds.size)
+        controller.view.bounds = CGRect(origin: .zero, size: size)
+        controller.view.sizeToFit()
+        
+// here is the call to the function that converts UIView to UIImage: `.asUIImage()`
+        let image = controller.view.asUIImage()
+        controller.view.removeFromSuperview()
+        return image
+    }
+}
+
+extension UIView {
+// This is the function to convert UIView to UIImage
+    public func asUIImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
     }
 }

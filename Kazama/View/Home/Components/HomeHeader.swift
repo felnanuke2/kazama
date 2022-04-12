@@ -6,44 +6,80 @@
 //
 
 import SwiftUI
+import UIImageColors
 
 struct HomeHeader: View {
-    let  localName : String
-    let colorSchema: WeatherStyleSchema
+    let chanceOfRain: Double
+    let humity: Double
+    let  localizedWeatherText: String
     
     
     
     var body: some View {
-    
-            HStack{
-                NavigationLink(destination: SearchView() ){
-                HStack{
-                    Image("location-dot-solid")
-                        
-                        .resizable().renderingMode(.template)
-                    
-                        .scaledToFit()
-                        .frame(height: 18).padding(.trailing,8)
+        
+        ZStack{
+            Color.main.opacity(0.3).cornerRadius(18).blur(radius: 2)
             
-                        
-                       
-                    
-                    Text(localName).font(.system(size: 18).bold())
-              
-                    
-                    Image(systemName: "chevron.down").font(.caption.bold()).padding(.leading,8)
+            VStack {
+                HStack{
+                    Text("Barcelona, Spain").font(.title2)
                     Spacer()
-                }
+                    Image(systemName: "ellipsis").font(.title).foregroundColor(.accentColor)
                 }
                 
-                Image(systemName: "calendar").resizable().scaledToFit().frame(height: 18)
-            }.padding(.horizontal,16).foregroundColor(colorSchema.foregroundColorPrimary)
-    
-}
+                Spacer()
+                HStack{
+                    VStack( alignment: .leading,spacing: 8){
+                        
+                        Text("24°").font(.largeTitle)
+                        
+                        Text(localizedWeatherText)
+                        
+                        Text("ChanceOfRain \("\(chanceOfRain.formatted())%")")
+                        
+                        Text(LocalizedStringKey.humity(value: humity))
+                        
+                        
+                    }
+                    
+                    Spacer(minLength: 30)
+                    Image(systemName: "sun.max").resizable().scaledToFit().padding(30)
+                    
+                }
+                
+                
+                
+            }.padding(30)
+            
+            
+            
+        }.frame(height: 300)
+        
+        
+        
+    }
 }
 
 struct HomeHeader_Previews: PreviewProvider {
     static var previews: some View {
-        HomeHeader(localName: "Presidente Franco",colorSchema: .clearDay)
+        ZStack{
+            Color.cyan
+            HomeHeader(chanceOfRain: 24,humity: 45 ,localizedWeatherText: "Sunny")
+                .preferredColorScheme(.dark)
+        }
+    }
+}
+
+extension UIColor{
+    var color : Color {
+        Color(uiColor: self)
+    }
+    
+}
+
+extension Color {
+    
+    static var main : Color{
+       Color("PrimaryColor")
     }
 }

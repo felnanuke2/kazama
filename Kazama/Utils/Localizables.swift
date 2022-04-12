@@ -12,5 +12,9 @@ extension LocalizedStringKey{
     static let seachPageTitle = LocalizedStringKey("SeachPageTitle")
     static let searchFielTitle = LocalizedStringKey("SearchFielTitle")
     static let currentLocation = LocalizedStringKey("CurrentLocation")
+    static let chanceOfRain = "ChanceOfRain"
+    
+    static func humity (value :Double ) -> LocalizedStringKey{
+        LocalizedStringKey("Humity \(String(format: "%.0f", arguments: [value]).appending("%"))")}
     
 }
